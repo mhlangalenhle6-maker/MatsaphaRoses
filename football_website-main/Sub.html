@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Contact or partner with Matsapha Roses Football Club in Matsapha, Eswatini."
+  >
+
+  <title>Contact & Partnership | Matsapha Roses FC</title>
+
+  <link
+    rel="icon"
+    href="public/assets/brand/matsapha-roses-logo.jpeg"
+  >
+
+  <link
+    rel="stylesheet"
+    href="public/styles/site.css"
+  >
+
+  <style>
+
+    /* =====================================================
+       GENERAL
+    ===================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+
+    /* =====================================================
+       PARTNERSHIP SECTION
+    ===================================================== */
+
+    .subscription-section {
+      width: 100%;
+      padding: 90px 8%;
+      background: #f5f7fb;
+    }
+
+    .subscription-container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       HEADING
+    ===================================================== */
+
+    .subscription-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .subscription-heading .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+
+      color: #0b3d91;
+
+      font-size: 0.85rem;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .subscription-heading h1 {
+      margin: 0 0 16px;
+
+      color: #0b3d91;
+
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+    }
+
+    .subscription-heading p {
+      max-width: 650px;
+      margin: 0 auto;
+
+      color: #666;
+
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       FORM CARD
+    ===================================================== */
+
+    .subscription-form {
+      width: 100%;
+
+      padding: 45px;
+
+      background: #ffffff;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.08);
+    }
+
+
+    /* =====================================================
+       FORM ROW
+    ===================================================== */
+
+    .form-row {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 22px;
+    }
+
+
+    /* =====================================================
+       FORM GROUP
+    ===================================================== */
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #222;
+
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       INPUTS
+    ===================================================== */
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+
+      padding: 14px 16px;
+
+      border: 1px solid #d8dce5;
+
+      border-radius: 9px;
+
+      background: #ffffff;
+
+      color: #222;
+
+      font-family: inherit;
+      font-size: 0.95rem;
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    /* =====================================================
+       TEXTAREA
+    ===================================================== */
+
+    .form-group textarea {
+      min-height: 130px;
+
+      resize: vertical;
+    }
+
+
+    /* =====================================================
+       PLACEHOLDER
+    ===================================================== */
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #999;
+    }
+
+
+    /* =====================================================
+       INPUT FOCUS
+    ===================================================== */
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+
+      border-color: #0b3d91;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(11, 61, 145, 0.10);
+    }
+
+
+    /* =====================================================
+       SELECT
+    ===================================================== */
+
+    .form-group select {
+      cursor: pointer;
+    }
+
+
+    /* =====================================================
+       SUBMIT BUTTON
+    ===================================================== */
+
+    .subscription-submit {
+
+      display: block;
+
+      margin: 10px auto 0;
+
+      padding: 15px 32px;
+
+      border: none;
+
+      border-radius: 8px;
+
+      background: #0b3d91;
+
+      color: #ffffff;
+
+      font-family: inherit;
+
+      font-size: 1rem;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+
+    .subscription-submit:hover {
+
+      background: #082f70;
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 8px 18px
+        rgba(11, 61, 145, 0.20);
+    }
+
+
+    .subscription-submit:active {
+
+      transform: translateY(0);
+
+      box-shadow: none;
+    }
+
+
+    /* =====================================================
+       DESKTOP FORM DETAILS
+    ===================================================== */
+
+    @media (min-width: 1000px) {
+
+      .subscription-form {
+        padding: 50px;
+      }
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .subscription-section {
+        padding: 75px 6%;
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .subscription-section {
+        padding: 60px 5%;
+      }
+
+      .subscription-heading {
+        margin-bottom: 35px;
+      }
+
+      .subscription-heading h1 {
+        font-size: 2rem;
+      }
+
+      .subscription-heading p {
+        font-size: 0.95rem;
+      }
+
+      .subscription-form {
+        padding: 28px 22px;
+
+        border-radius: 14px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+      }
+
+      .subscription-submit {
+        width: 100%;
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL PHONES
+    ===================================================== */
+
+    @media (max-width: 420px) {
+
+      .subscription-section {
+        padding: 50px 4%;
+      }
+
+      .subscription-form {
+        padding: 22px 17px;
+      }
+
+      .subscription-heading h1 {
+        font-size: 1.75rem;
+      }
+
+      .subscription-heading p {
+        font-size: 0.92rem;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 13px 14px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVIGATION
+       Loaded automatically by common.js
+  ===================================================== -->
+
+  <div data-site-header></div>
+
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ===================================================== -->
+
+  <main>
+
+
+    <!-- ===================================================
+         PARTNERSHIP SUBSCRIPTION
+    =================================================== -->
+
+    <section class="subscription-section">
+
+      <div class="subscription-container">
+
+
+        <!-- ===============================================
+             PAGE HEADING
+        ================================================ -->
+
+        <div class="subscription-heading">
+
+          <span class="eyebrow">
+            Become a Partner
+          </span>
+
+          <h1>
+            Partner with Matsapha Roses FC
+          </h1>
+
+          <p>
+            Choose a partnership level and join us in
+            building the future of Matsapha Roses
+            Football Club.
+          </p>
+
+        </div>
+
+
+
+        <!-- ===============================================
+             PARTNERSHIP FORM
+        ================================================ -->
+
+        <form
+          class="subscription-form"
+          id="partnershipForm"
+          data-contact-form
+          action="https://formsubmit.co/admin@matsapharosesfc.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="Partnership request from Matsapha Roses FC website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honey-field" aria-hidden="true">
+
+
+          <!-- =============================================
+               FULL NAME + COMPANY
+          ============================================== -->
+
+          <div class="form-row">
+
+
+            <!-- Full Name -->
+
+            <div class="form-group">
+
+              <label for="fullName">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+
+
+            <!-- Company -->
+
+            <div class="form-group">
+
+              <label for="company">
+                Company / Organisation
+              </label>
+
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Company or organisation name"
+                autocomplete="organization"
+              >
+
+            </div>
+
+          </div>
+
+
+
+          <!-- =============================================
+               EMAIL + PHONE
+          ============================================== -->
+
+          <div class="form-row">
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+              <label for="email">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+
+
+            <!-- Phone -->
+
+            <div class="form-group">
+
+              <label for="phone">
+                Phone Number
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+268 7XXX XXXX"
+                autocomplete="tel"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+
+          <!-- =============================================
+               PARTNERSHIP LEVEL
+          ============================================== -->
+
+          <div class="form-group">
+
+            <label for="partnership">
+              Partnership Level
+            </label>
+
+            <select
+              id="partnership"
+              name="partnership"
+              required
+            >
+
+              <option
+                value=""
+                disabled
+                selected
+              >
+                Select a partnership level
+              </option>
+
+              <option value="bronze">
+                Bronze Partner
+              </option>
+
+              <option value="silver">
+                Silver Partner
+              </option>
+
+              <option value="gold">
+                Gold Partner
+              </option>
+
+              <option value="platinum">
+                Platinum Partner
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- =============================================
+               MESSAGE
+          ============================================== -->
+
+          <div class="form-group">
+
+            <label for="message">
+              Message
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell us how you would like to partner with Matsapha Roses FC..."
+            ></textarea>
+
+          </div>
+
+
+
+          <!-- =============================================
+               SUBMIT BUTTON
+          ============================================== -->
+
+          <button
+            type="submit"
+            class="subscription-submit"
+          >
+            Submit Partnership Request
+          </button>
+
+          <p class="form-status" data-form-status hidden aria-live="polite"></p>
+
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       Loaded automatically by common.js
+  ===================================================== -->
+
+  <div data-site-footer></div>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ===================================================== -->
+
+  <script src="public/scripts/data.js"></script>
+
+  <script src="public/scripts/common.js"></script>
+
+  <script src="public/scripts/contact.js"></script>
+
+
+</body>
+
+</html>

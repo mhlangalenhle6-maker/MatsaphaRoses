@@ -1,0 +1,12 @@
+.inspection/
+.agents/
+.browser-temp*/
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+Matsapha_Roses_Playbook_*.pptx
+WhatsApp Image *.jpeg
+server/uploads/*
+!server/uploads/.gitkeep

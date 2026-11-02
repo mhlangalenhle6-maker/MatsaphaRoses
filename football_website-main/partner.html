@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Contact or partner with Matsapha Roses Football Club in Matsapha, Eswatini."
+  >
+
+  <title>Contact & Partnership | Matsapha Roses FC</title>
+
+  <link
+    rel="icon"
+    href="public/assets/brand/matsapha-roses-logo.jpeg"
+  >
+
+  <link
+    rel="stylesheet"
+    href="public/styles/site.css"
+  >
+
+  <style>
+
+    /* =====================================================
+       GENERAL
+    ====================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(1400px, 92%);
+      margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       SKIP LINK
+    ====================================================== */
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .skip-link:focus {
+      left: 20px;
+      top: 20px;
+      z-index: 9999;
+      padding: 10px 15px;
+      background: #000;
+      color: #fff;
+    }
+
+
+    /* =====================================================
+       CONTACT SECTION
+    ====================================================== */
+
+    .contact-layout {
+      background: #0b3d91;
+      color: #ffffff;
+    }
+
+    .contact-layout {
+      background:
+        linear-gradient(
+          135deg,
+          #111111,
+          #252525
+        );
+
+      color: #ffffff;
+    }
+
+    .contact-panel > p {
+      color: #ffffff;
+    }
+
+
+    .eyebrow {
+      margin: 0 0 10px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      color: #c89b3c;
+    }
+
+    .eyebrow-light {
+      color: #d6ad55;
+    }
+
+    .contact-panel h1 {
+      color: #ffffff;
+    }
+
+    .contact-panel > p {
+      max-width: 700px;
+
+      font-size: 18px;
+      line-height: 1.8;
+
+      color: #dddddd;
+    }
+
+
+    /* =====================================================
+       CONTACT DETAILS
+    ====================================================== */
+
+    .contact-list {
+      margin-top: 30px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 30px;
+    }
+
+    .contact-list a,
+    .contact-list span {
+      color: #ffffff;
+    }
+
+    .contact-list svg {
+      stroke: #ffffff;
+    }
+
+
+    /* =====================================================
+       PARTNERSHIP SECTION
+    ====================================================== */
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-soft {
+      background: #f7f7f7;
+    }
+
+
+    /* =====================================================
+       CENTERED HEADING
+    ====================================================== */
+
+    .partnership-heading {
+      text-align: center;
+
+      max-width: 850px;
+
+      margin: 0 auto 50px;
+    }
+
+    .partnership-heading .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+
+      font-size: clamp(35px, 5vw, 55px);
+      line-height: 1.1;
+
+      color: #111111;
+    }
+
+    .section-title span {
+      color: #c89b3c;
+    }
+
+    .partnership-heading > p {
+      max-width: 700px;
+
+      margin: 0 auto;
+
+      color: #666666;
+
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       FOUR PARTNERSHIP CARDS
+    ====================================================== */
+
+    .sponsor-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 22px;
+
+      align-items: stretch;
+    }
+
+
+    /* =====================================================
+       SPONSOR CARD
+    ====================================================== */
+
+    .sponsor-card {
+      position: relative;
+
+      background: #ffffff;
+
+      border: 1px solid #e3e3e3;
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+
+      min-height: 100%;
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .sponsor-card:hover {
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* =====================================================
+       CARD HEADER
+    ====================================================== */
+
+    .sponsor-header {
+      padding: 28px 25px 20px;
+
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .sponsor-header h3 {
+      margin: 0 0 12px;
+
+      font-size: 28px;
+
+      color: #111111;
+    }
+
+    .sponsor-intro {
+      margin: 0;
+
+      color: #666666;
+
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       CARD CONTENT
+    ====================================================== */
+
+    .sponsor-content {
+      flex: 1;
+
+      padding: 22px 25px 28px;
+    }
+
+    .sponsor-content ul {
+      margin: 0;
+
+      padding-left: 19px;
+    }
+
+    .sponsor-content li {
+      margin-bottom: 11px;
+
+      color: #444444;
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       BRONZE
+    ====================================================== */
+
+    .bronze-card {
+      border-top: 5px solid #a66a2c;
+    }
+
+    .bronze-card .sponsor-header h3 {
+      color: #8b5a2b;
+    }
+
+
+    /* =====================================================
+       SILVER
+    ====================================================== */
+
+    .sponsor-card:nth-child(2) {
+      border-top: 5px solid #8f8f8f;
+    }
+
+    .sponsor-card:nth-child(2) .sponsor-header h3 {
+      color: #666666;
+    }
+
+
+    /* =====================================================
+       GOLD
+    ====================================================== */
+
+    .sponsor-card:nth-child(3) {
+      border-top: 5px solid #c89b3c;
+    }
+
+    .sponsor-card:nth-child(3) .sponsor-header h3 {
+      color: #a47a20;
+    }
+
+
+    /* =====================================================
+       PLATINUM
+    ====================================================== */
+
+    .sponsor-card.featured {
+      border-top: 5px solid #222222;
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .sponsor-card.featured .sponsor-header h3 {
+      color: #222222;
+    }
+
+    .sponsor-card.featured::before {
+      content: "PREMIUM";
+
+      position: absolute;
+
+      top: 15px;
+      right: 15px;
+
+      padding: 5px 9px;
+
+      border-radius: 20px;
+
+      background: #222222;
+      color: #ffffff;
+
+      font-size: 9px;
+      font-weight: 700;
+
+      letter-spacing: 1px;
+    }
+
+
+    /* =====================================================
+       SUBSCRIBE AREA
+    ====================================================== */
+
+    .sponsor-subscribe {
+      margin-top: 55px;
+
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 18px;
+    }
+
+    .sponsor-subscribe p {
+      margin: 0;
+
+      color: #333333;
+
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       SUBSCRIBE BUTTON
+    ====================================================== */
+
+    .subscribe-btn {
+      min-width: 190px;
+
+      padding: 15px 38px;
+
+      border: none;
+      border-radius: 50px;
+
+      background: #111111;
+      color: #ffffff;
+
+      font-size: 16px;
+      font-weight: 700;
+
+      letter-spacing: 0.4px;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.18);
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+    }
+
+    .subscribe-btn:hover {
+      background: #c89b3c;
+
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    .subscribe-btn:active {
+      transform: translateY(0);
+
+      box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .subscribe-btn:focus-visible {
+      outline: 3px solid #c89b3c;
+      outline-offset: 4px;
+    }
+
+
+    /* =====================================================
+       TABLET
+    ====================================================== */
+
+    @media (max-width: 1100px) {
+
+      .sponsor-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+    @media (max-width: 650px) {
+
+      .contact-layout {
+        padding: 60px 6%;
+      }
+
+      .contact-list {
+        flex-direction: column;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .sponsor-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+      }
+
+      .partnership-heading {
+        margin-bottom: 35px;
+      }
+
+      .sponsor-header {
+        padding: 25px 22px 18px;
+      }
+
+      .sponsor-content {
+        padding: 20px 22px 25px;
+      }
+
+      .sponsor-subscribe {
+        margin-top: 40px;
+      }
+
+      .subscribe-btn {
+        width: 100%;
+        max-width: 260px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body data-page="partner" data-base=".">
+
+
+  <!-- =====================================================
+       SKIP LINK
+  ====================================================== -->
+
+  <a
+    class="skip-link"
+    href="#main-content"
+  >
+    Skip to content
+  </a>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <div data-site-header></div>
+
+
+  <main id="main-content">
+
+
+    <!-- =====================================================
+         CONTACT INTRO
+    ====================================================== -->
+
+
+    <!-- =====================================================
+         PARTNERSHIP SECTION
+    ====================================================== -->
+
+    <section class="section section-soft">
+
+      <div class="shell">
+
+
+        <!-- CENTERED HEADING -->
+
+        <div class="partnership-heading">
+
+          <p class="eyebrow">
+            Partnership levels
+          </p>
+
+
+          <h2 class="section-title">
+            Choose your <span>impact.</span>
+          </h2>
+
+
+          <p>
+            Choose a partnership level that fits your organisation.
+            Commercial terms can be discussed and confirmed with the club.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             FOUR CARDS
+        ================================================== -->
+
+        <div class="sponsor-grid">
+
+
+          <!-- BRONZE -->
+
+          <article class="sponsor-card bronze-card">
+
+            <div class="sponsor-header">
+
+              <h3>
+                Bronze
+              </h3>
+
+              <p class="sponsor-intro">
+                A starting partnership package for organisations
+                that want to support Matsapha Roses FC and gain
+                recognition within the club community.
+              </p>
+
+            </div>
+
+
+            <div class="sponsor-content">
+
+              <ul>
+
+                <li>Official Bronze Partner recognition</li>
+
+                <li>Logo inclusion on selected promotional materials</li>
+
+                <li>Social-media recognition</li>
+
+                <li>Sponsor listing on selected club materials</li>
+
+                <li>Sponsor acknowledgement at selected events</li>
+
+                <li>Partnership certificate</li>
+
+                <li>Recognition in the club's annual impact report</li>
+
+                <li>
+                  Opportunity to provide products or services
+                  in addition to financial support
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- SILVER -->
+
+          <article class="sponsor-card">
+
+            <div class="sponsor-header">
+
+              <h3>
+                Silver
+              </h3>
+
+              <p class="sponsor-intro">
+                Increased visibility and engagement through
+                match-day, digital and promotional opportunities.
+              </p>
+
+            </div>
+
+
+            <div class="sponsor-content">
+
+              <ul>
+
+                <li>Enhanced logo placement</li>
+
+                <li>Regular social-media exposure</li>
+
+                <li>Match-day/event branding</li>
+
+                <li>
+                  Sponsor mentions in selected club communications
+                </li>
+
+                <li>One branded activation opportunity</li>
+
+                <li>
+                  Limited player/team appearance opportunities
+                </li>
+
+                <li>Inclusion in selected club media content</li>
+
+                <li>Hospitality opportunities</li>
+
+                <li>Partnership certificate</li>
+
+                <li>
+                  Recognition in season-end communications
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- GOLD -->
+
+          <article class="sponsor-card">
+
+            <div class="sponsor-header">
+
+              <h3>
+                Gold
+              </h3>
+
+              <p class="sponsor-intro">
+                A major partnership level designed for organisations
+                seeking strong visibility and community engagement.
+              </p>
+
+            </div>
+
+
+            <div class="sponsor-content">
+
+              <ul>
+
+                <li>Official Major Partner status</li>
+
+                <li>
+                  Prominent logo placement on agreed club assets
+                </li>
+
+                <li>Prominent match-day branding</li>
+
+                <li>
+                  Dedicated sponsor social-media campaign
+                </li>
+
+                <li>Multiple sponsor activation opportunities</li>
+
+                <li>
+                  Community or youth-development activity
+                </li>
+
+                <li>
+                  Player/team appearances for approved activities
+                </li>
+
+                <li>
+                  Sponsor feature in selected club media content
+                </li>
+
+                <li>Partnership certificate</li>
+
+                <li>
+                  Featured recognition in the annual impact report
+                </li>
+
+                <li>
+                  Priority discussion regarding partnership renewal
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- PLATINUM -->
+
+          <article class="sponsor-card featured">
+
+            <div class="sponsor-header">
+
+              <h3>
+                Platinum
+              </h3>
+
+              <p class="sponsor-intro">
+                The highest partnership level, offering premium
+                visibility, activation and community-impact opportunities.
+              </p>
+
+            </div>
+
+
+            <div class="sponsor-content">
+
+              <ul>
+
+                <li>
+                  Highest-level branding available within the agreed partnership
+                </li>
+
+                <li>
+                  Premium logo placement on official club assets
+                </li>
+
+                <li>Prominent match-day branding</li>
+
+                <li>
+                  Dedicated digital and social-media campaign
+                </li>
+
+                <li>
+                  Multiple corporate activation opportunities
+                </li>
+
+                <li>
+                  Player/team appearances for approved corporate activities
+                </li>
+
+                <li>VIP hospitality opportunities</li>
+
+                <li>
+                  Joint public-relations and media opportunities
+                </li>
+
+                <li>
+                  Naming rights for an agreed programme,
+                  tournament or community initiative
+                </li>
+
+                <li>Event branding</li>
+
+                <li>
+                  Category exclusivity where commercially appropriate
+                </li>
+
+                <li>
+                  Dedicated community-impact initiative
+                </li>
+
+                <li>
+                  Featured position in the annual impact report
+                </li>
+
+                <li>
+                  First-right discussion regarding renewal
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <!-- =================================================
+             SUBSCRIBE
+        ================================================== -->
+
+        <div class="sponsor-subscribe">
+
+          <p>
+            Ready to become a Matsapha Roses FC partner?
+          </p>
+
+
+          <a
+            href="Sub.html"
+            class="subscribe-btn"
+          >
+            Subscribe
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <div data-site-footer></div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script src="public/scripts/data.js"></script>
+
+  <script src="public/scripts/common.js"></script>
+
+  <script src="public/scripts/contact.js"></script>
+
+
+</body>
+
+</html>

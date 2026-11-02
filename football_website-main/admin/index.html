@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Administration | Matsapha Roses FC</title>
+  <link rel="icon" href="../public/assets/brand/matsapha-roses-logo.jpeg">
+  <link rel="stylesheet" href="../public/styles/site.css">
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a class="brand brand-light" href="../index.html">
+        <img src="../public/assets/brand/matsapha-roses-logo.jpeg" alt="">
+        <span><strong>Matsapha</strong><small>Club admin</small></span>
+      </a>
+      <nav class="admin-nav" aria-label="Administration">
+        <a class="is-active" href="#dashboard" data-admin-nav="dashboard">Dashboard</a>
+        <a href="#players" data-admin-nav="players">Players</a>
+        <a href="#sponsors" data-admin-nav="sponsors">Sponsors</a>
+      </nav>
+      <a class="button button-small button-outline-light admin-view-site" href="../index.html">View website</a>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <p class="card-kicker">Content management</p>
+          <h1 data-admin-title>Dashboard</h1>
+        </div>
+        <span class="admin-badge">Local draft store</span>
+      </header>
+
+      <section class="admin-view is-active" data-admin-view="dashboard">
+        <div class="admin-cards">
+          <article class="admin-card"><strong data-admin-count="members">0</strong><span>Team profiles</span></article>
+          <article class="admin-card"><strong data-admin-count="players">0</strong><span>Players</span></article>
+          <article class="admin-card"><strong data-admin-count="sponsors">0</strong><span>Sponsors</span></article>
+          <article class="admin-card"><strong data-admin-count="news">0</strong><span>News stories</span></article>
+        </div>
+
+        <div class="admin-grid">
+          <section class="admin-panel">
+            <h2>Quick actions</h2>
+            <div class="admin-actions">
+              <a class="button button-dark" href="#players" data-admin-nav="players">Manage players</a>
+              <a class="button button-outline" href="../members.html">Preview team page</a>
+              <button class="button button-outline" type="button" data-admin-reset>Reset players to defaults</button>
+            </div>
+            <p class="admin-note"><strong>Note:</strong> player changes are saved in this browser only (localStorage). Connect a database and authentication before production use.</p>
+          </section>
+          <aside class="admin-panel">
+            <h2>Live inventory</h2>
+            <div class="readiness-list" data-admin-inventory></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="admin-view" data-admin-view="players" id="players">
+        <div class="admin-grid admin-grid-players">
+          <section class="admin-panel">
+            <div class="admin-panel-head">
+              <h2>Squad directory</h2>
+              <button class="button button-small button-dark" type="button" data-admin-new-player>Add player</button>
+            </div>
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Photo</th>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Squad</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody data-admin-player-rows></tbody>
+              </table>
+            </div>
+          </section>
+
+          <aside class="admin-panel admin-form-panel">
+            <h2 data-admin-form-title>Add player</h2>
+            <form class="admin-form" data-admin-player-form novalidate>
+              <input type="hidden" name="slug" value="">
+
+              <label>
+                <span>Full name</span>
+                <input name="name" type="text" required placeholder="e.g. Sanga Dlamini">
+              </label>
+
+              <div class="admin-form-row">
+                <label>
+                  <span>Role</span>
+                  <select name="role">
+                    <option value="Player">Player</option>
+                    <option value="Coach">Coach</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Management">Management</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Squad</span>
+                  <select name="squad">
+                    <option value="First Team">First Team</option>
+                    <option value="U20 Ladies">U20 Ladies</option>
+                    <option value="Management">Management</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="admin-form-row">
+                <label>
+                  <span>Shirt number</span>
+                  <input name="number" type="text" placeholder="10">
+                </label>
+                <label>
+                  <span>Short name / initials</span>
+                  <input name="shortName" type="text" maxlength="3" placeholder="SA">
+                </label>
+              </div>
+
+              <label>
+                <span>Status line</span>
+                <input name="status" type="text" placeholder="Top goal scorer">
+              </label>
+
+              <label>
+                <span>Player photo</span>
+                <select name="photo" data-admin-photo-select>
+                  <option value="">No photo</option>
+                </select>
+              </label>
+              <div class="admin-photo-preview" data-admin-photo-preview hidden>
+                <img alt="Selected player photo preview">
+              </div>
+
+              <label>
+                <span>Biography</span>
+                <textarea name="bio" rows="4" placeholder="Short verified biography…"></textarea>
+              </label>
+
+              <label>
+                <span>Highlights (comma separated)</span>
+                <input name="highlights" type="text" placeholder="First Team, Captain, Top scorer">
+              </label>
+
+              <div class="admin-form-actions">
+                <button class="button button-dark" type="submit">Save player</button>
+                <button class="button button-outline" type="button" data-admin-cancel>Cancel</button>
+              </div>
+              <p class="admin-form-status" data-admin-form-status hidden></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="admin-view" data-admin-view="sponsors" id="sponsors">
+        <section class="admin-panel">
+          <h2>Sponsors on every page</h2>
+          <p class="admin-panel-copy">These logos appear in the site-wide partners strip before the footer on every public page.</p>
+          <div class="admin-sponsors-grid" data-admin-sponsors></div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="../public/scripts/data.js"></script>
+  <script src="../public/scripts/admin.js"></script>
+</body>
+</html>
